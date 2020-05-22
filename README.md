@@ -5,6 +5,7 @@
 ## ¿Que es Xss Reflected?
 
 <div style="text-align: justify"> 
+
 Xss es una vulnerabilidad presente comúnmente en aplicaciones web la cual permitirá inyectar al (OUTPUT) ó a la salida de datos de la aplicación sentencias maliciosas que se reflejan o se ejecutan en el navegador de la víctima, las cuales aprovechando la confianza de la sesión que se ejecuta en el momento permitirá realizar acciones que pueden comprometer al usuario afectado. Comúnmente para la explotación de estas vulnerabilidades los atacantes suelen enviar enlaces maliciosos al usuario autenticado o dueño legítimo de la sesión para que lo ejecute con la intención de: robar cookies, robar sesiones, redireccionar a sitios controlados por el mismo atacante, modificar la vista o la estructura del sitio web, realizar acciones en nombre del usuario legítimo para dañar u obtener algún beneficio, entre algunas otras cosas.Desde la perspectiva del navegador, estas sentencias maliciosas son ejecutadas desde el sitio web por lo que el navegador lo asume como legítimo.
 
 </div>
@@ -115,20 +116,11 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 <div style="text-align: justify"> 
 
 1. Uso del atributo HTTPOnly en las cookies.
-   Este indicador evita que código JS acceda al contenido de la cookie, lo cual evita que las cookies sean obtenidas a través de la explotación de esta vulnerabilidad.
-</br>
-</br>
-
+   Este indicador evita que código JS acceda al contenido de la cookie, lo cual evita que las cookies sean obtenidas a través de la explotación de esta vulnerabilidad.</br>
 2. Uso del encabezado de respuesta http Content-Security-Policy. 
-   Este funciona baja el principio de white list, este encabezado restringe las fuentes desde las cuales se pueden cargar scripts y datos en todo sitio web, si un código malicioso se introduce en el código HTML sin ser reconocido dentro de la whitelist y este intenta cargar datos externos, el navegador del usuario lo rechazará.
-</br>
-</br>
-
+   Este funciona baja el principio de white list, este encabezado restringe las fuentes desde las cuales se pueden cargar scripts y datos en todo sitio web, si un código malicioso se introduce en el código HTML sin ser reconocido dentro de la whitelist y este intenta cargar datos externos, el navegador del usuario lo rechazará.</br>
 3. Uso del encabezado HTTP X-XSS-Protection.
-   Este encabezado evita que los navegadores carguen una página si detectan la explotación de Reflected XSS.
-</br>
-</br>
-
+   Este encabezado evita que los navegadores carguen una página si detectan la explotación de Reflected XSS.</br>
 4. Uso de encabezados de respuesta apropiados. 
    Establecer la cabecera X-Content-Type-Options nos apoyará en asegurar que los navegadores  no carguen hojas de estilo, JavaScript o un Myme-type no definido o inadecuado. Esto reduce el riesgo de un ataque de Xss o de confusión de Myme-type.
 
