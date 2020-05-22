@@ -94,15 +94,10 @@ La imagen siguiente muesta un ejemplo de explotacion de esta vulnerabilidad
 8  //    <p><em><strong><%= request.getParameter("search") %></strong></em></p>
 9 </c:otherwise>
 ```
-</br>
 
-<div style="text-align: justify"> 
 Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo presentado anteriormente vamos a hacer uso del tag <c:out> en la línea 7, esta etiqueta nos ayudará a controlar los datos proporcionados por los usuarios ya que escapará y codificará de manera automática los caracteres HTML dentro del marcado mostrado al usuario, incluidos los caracteres "<" ">" ",", por lo cual esto evitará la inyección de código malicioso. 
-</div>
 
 ## ¿Que elementos puedo utilizar para reforzar la seguridad ante esta vulnerabilidad o en el momento en que este desarrollando una nueva aplicación?
-
-<div style="text-align: justify"> 
 
 1. Uso del atributo HTTPOnly en las cookies.
    Este indicador evita que código JS acceda al contenido de la cookie, lo cual evita que las cookies sean obtenidas a través de la explotación de esta vulnerabilidad.</br>
@@ -112,8 +107,6 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
    Este encabezado evita que los navegadores carguen una página si detectan la explotación de Reflected XSS.</br>
 4. Uso de encabezados de respuesta apropiados. 
    Establecer la cabecera X-Content-Type-Options nos apoyará en asegurar que los navegadores  no carguen hojas de estilo, JavaScript o un Myme-type no definido o inadecuado. Esto reduce el riesgo de un ataque de Xss o de confusión de Myme-type.
-
-</div>
 
 ### Proximas actividades por incluír dentro de este artículo.
 
