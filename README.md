@@ -106,7 +106,8 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 
 <img src="./Recursos/Imagenes/bluewritte.png" align="right" alt="logoOadis" style="zoom:30%;" />
 <p>
-- Desarrollo de aplicación dummie vulnerable a xss reflected.  
+- Desarrollo de aplicación dummie vulnerable a xss reflected.
+<br>
 - Walkthrough para explotación de vulnerabilidad.  
 - Intrusion test para validar que la solución de remediación propuesta es adecuada.  
 </p>
