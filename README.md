@@ -108,7 +108,8 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 <p>
 - Desarrollo de aplicación dummie vulnerable a xss reflected.
 <br>
-- Walkthrough para explotación de vulnerabilidad.  
+- Walkthrough para explotación de vulnerabilidad.
+<br>
 - Intrusion test para validar que la solución de remediación propuesta es adecuada.  
 </p>
 <h4>Referencias</h4>
