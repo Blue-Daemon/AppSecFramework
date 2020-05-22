@@ -116,8 +116,10 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 </p>
 <h4>Referencias</h4>
 <p>
-https://capec.mitre.org/data/definitions/591.html   
+https://capec.mitre.org/data/definitions/591.html
+<br>   
 https://owasp.org/www-community/attacks/xss/    
+<br>
 https://www.veracode.com/security/xss
 </p>
 
