@@ -110,7 +110,9 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 <br>
 - Walkthrough para explotación de vulnerabilidad.
 <br>
-- Intrusion test para validar que la solución de remediación propuesta es adecuada.  
+- Intrusion test para validar que la solución de remediación propuesta es adecuada.
+<br>
+- Controles compensatorios en caso de no poder remdiar a nivel código.  
 </p>
 <h4>Referencias</h4>
 <p>
