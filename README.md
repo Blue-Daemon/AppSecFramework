@@ -4,11 +4,7 @@
 
 ## ¿Que es Xss Reflected?
 
-<div style="text-align: justify"> 
-
 Xss es una vulnerabilidad presente comúnmente en aplicaciones web la cual permitirá inyectar al (OUTPUT) ó a la salida de datos de la aplicación sentencias maliciosas que se reflejan o se ejecutan en el navegador de la víctima, las cuales aprovechando la confianza de la sesión que se ejecuta en el momento permitirá realizar acciones que pueden comprometer al usuario afectado. Comúnmente para la explotación de estas vulnerabilidades los atacantes suelen enviar enlaces maliciosos al usuario autenticado o dueño legítimo de la sesión para que lo ejecute con la intención de: robar cookies, robar sesiones, redireccionar a sitios controlados por el mismo atacante, modificar la vista o la estructura del sitio web, realizar acciones en nombre del usuario legítimo para dañar u obtener algún beneficio, entre algunas otras cosas.Desde la perspectiva del navegador, estas sentencias maliciosas son ejecutadas desde el sitio web por lo que el navegador lo asume como legítimo.
-
-</div>
 
 >Resumidamente XSS reflected implica que la carga útil maliciosa como dato de entrada se refleja, es decir, el servidor web recibe la solicitud y la misma solicitud la incluye como parte de la respuesta enviada al cliente/usuario.
 
@@ -81,8 +77,6 @@ La imagen siguiente muesta un ejemplo de explotacion de esta vulnerabilidad
 
 ## Conceptualización de la remediación de la vulnerabilidad en código.
 
-</br>
-
 ```java
 1  // Pseudocode for remediation Search JSP webpage
 2  <c:when test="${f:h(allRecordCount) != 0}">
@@ -112,7 +106,7 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 
 <div>
 
-<img src="./Recursos/Imagenes/bluewritte.png" align="right" alt="logoOadis" style="zoom:40%;" />
+<img src="./Recursos/Imagenes/bluewritte.png" align="right" alt="logoOadis" style="zoom:20%;" />
 <p>
 - Desarrollo de aplicación dummie vulnerable a xss reflected.
 </br>
