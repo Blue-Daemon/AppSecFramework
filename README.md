@@ -92,6 +92,7 @@ Xss es una vulnerabilidad presente comúnmente en aplicaciones web la cual permi
 ## Conceptualización de la remediación de la vulnerabilidad en código.
 
 </br>
+
 ```java
 1  // Pseudocode for remediation Search JSP webpage
 2  <c:when test="${f:h(allRecordCount) != 0}">
@@ -103,6 +104,8 @@ Xss es una vulnerabilidad presente comúnmente en aplicaciones web la cual permi
 8  //    <p><em><strong><%= request.getParameter("search") %></strong></em></p>
 9 </c:otherwise>
 ```
+</br>
+
 <div style="text-align: justify"> 
 Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo presentado anteriormente vamos a hacer uso del tag <c:out> en la línea 7, esta etiqueta nos ayudará a controlar los datos proporcionados por los usuarios ya que escapará y codificará de manera automática los caracteres HTML dentro del marcado mostrado al usuario, incluidos los caracteres "<" ">" ",", por lo cual esto evitará la inyección de código malicioso. 
 </div>
