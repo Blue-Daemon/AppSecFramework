@@ -12,11 +12,7 @@ Xss es una vulnerabilidad presente comúnmente en aplicaciones web la cual permi
 
 </br>
 
-<div style="text-align: justify"> 
-
 >Resumidamente XSS reflected implica que la carga útil maliciosa como dato de entrada se refleja, es decir, el servidor web recibe la solicitud y la misma solicitud la incluye como parte de la respuesta enviada al cliente/usuario.
-
-</div>
 
 </br>
 <font size="2">La imagen siguiente muesta un ejemplo de explotacion de esta vulnerabilidad</font> 
