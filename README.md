@@ -106,14 +106,14 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 
 <img src="./Recursos/Imagenes/bluewritte.png" align="right" alt="logoOadis" style="zoom:30%;" />
 <p>
-- Desarrollo de aplicación dummie vulnerable a xss reflected.
-- Walkthrough para explotación de vulnerabilidad.
-- Intrusion test para validar que la solución de remediación propuesta es adecuada.
+- Desarrollo de aplicación dummie vulnerable a xss reflected.   
+- Walkthrough para explotación de vulnerabilidad.   
+- Intrusion test para validar que la solución de remediación propuesta es adecuada.   
 </p>
 <h4>Referencias</h4>
 <p>
-https://capec.mitre.org/data/definitions/591.html</br>
-https://owasp.org/www-community/attacks/xss/</br>
+https://capec.mitre.org/data/definitions/591.html   
+https://owasp.org/www-community/attacks/xss/    
 https://www.veracode.com/security/xss
 </p>
 
