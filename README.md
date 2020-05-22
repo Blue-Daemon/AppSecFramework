@@ -27,8 +27,8 @@ La imagen siguiente muesta un ejemplo de explotacion de esta vulnerabilidad
 8  </c:otherwise>
 ```
 
-1. En la línea 2 del fragmento de código, la página web valida si existen resultados de la búsqueda de un usuario, <c: when> se nombra al tag condicional para verificar si el servidor devolvió los resultados de la búsqueda, resultados que posteriormente son formateados y representados en el tag <searchResults.jsp>. Esto se percibe en la línea 3.  
-2. Posteriormente si no se encuentran resultados coincidentes con los datos proporcionados por el usuario se pasa al fragmento de código dentro del tag <c: otherwise> que inicia en la línea 5, este mostrará el marcado HTML dentro de las líneas 6 y 7, las cuales muestran el mensaje "No results found for:" seguido de la cadena de búsqueda proporcionada por el usuario, esto se muestra en la línea 7.  
+1. En la línea 2 del fragmento de código, la página web valida si existen resultados de la búsqueda de un usuario, "c: when" se nombra al tag condicional para verificar si el servidor devolvió los resultados de la búsqueda, resultados que posteriormente son formateados y representados en el tag "searchResults.jsp". Esto se percibe en la línea 3.  
+2. Posteriormente si no se encuentran resultados coincidentes con los datos proporcionados por el usuario se pasa al fragmento de código dentro del tag "c: otherwise" que inicia en la línea 5, este mostrará el marcado HTML dentro de las líneas 6 y 7, las cuales muestran el mensaje "No results found for:" seguido de la cadena de búsqueda proporcionada por el usuario, esto se muestra en la línea 7.  
 3. Para representar el mensaje de error "No results found for:"  seguido de la cadena ingresada como búsqueda, se llama al método "request.getParameter()" para extraer el parámetro de búsqueda insertado por el usuario, que posteriormente se representa directamente como una expresión JSP. Línea 7.  
 4. Desafortunadamente, en el ejemplo JSP no escapa los valores, por lo que si el parámetro "search" contenía datos con formato HTML, Java simplemente representará esta cadena sin escapar o codificar primero, por lo cual, cuando se muestra el mensaje "No results found for:", la cadena de datos HTML insertada el campo de búsqueda también se representará, permitiendo así la inyección de código en el contexto del navegador del usuario.  
 
@@ -47,33 +47,31 @@ La imagen siguiente muesta un ejemplo de explotacion de esta vulnerabilidad
 </thead>
 <tbody>
 <tr>
-  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="left">Lectura de datos</td>
-  <td bgcolor="d8345f" style="color:#f7f7f7;">Aplica</td>
+  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="center">Lectura de datos</td>
+  <td bgcolor="d8345f" style="color:#f7f7f7;" align="center">Aplica</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
-  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="left">Obtención de privilegios</td>
-  <td bgcolor="d8345f" style="color:#f7f7f7;">Aplica</td>
+  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="center">Obtención de privilegios</td>
+  <td bgcolor="d8345f" style="color:#f7f7f7;" align="center">Aplica</td>
   <td></td>
   <td></td>
 </tr>
 <tr>
-  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="left">Ejecución no autorizada de comandos</td>
-  <td bgcolor="d8345f" style="color:#f7f7f7;">Aplica</td>
-  <td bgcolor="d8345f" style="color:#f7f7f7;">Aplica</td>
-  <td bgcolor="d8345f" style="color:#f7f7f7;">Aplica</td>
+  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="center">Ejecución no autorizada de comandos</td>
+  <td bgcolor="d8345f" style="color:#f7f7f7;" align="center">Aplica</td>
+  <td bgcolor="d8345f" style="color:#f7f7f7;" align="center">Aplica</td>
+  <td bgcolor="d8345f" style="color:#f7f7f7;" align="center">Aplica</td>
 </tr>
 <tr>
-  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="left">Modificación de datos</td>
+  <td bgcolor="7d5a5a" style="color:#f7f7f7;" align="center">Modificación de datos</td>
   <td></td>
-  <td bgcolor="d8345f" style="color:#f7f7f7;">Aplica</td>
+  <td bgcolor="d8345f" style="color:#f7f7f7;" align="center">Aplica</td>
   <td></td>
 </tr>
 </tbody>
 </table>
-
-</br>
 
 ## Conceptualización de la remediación de la vulnerabilidad en código.
 
@@ -89,16 +87,16 @@ La imagen siguiente muesta un ejemplo de explotacion de esta vulnerabilidad
 9 </c:otherwise>
 ```
 
-Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo presentado anteriormente vamos a hacer uso del tag <c:out> en la línea 7, esta etiqueta nos ayudará a controlar los datos proporcionados por los usuarios ya que escapará y codificará de manera automática los caracteres HTML dentro del marcado mostrado al usuario, incluidos los caracteres "<" ">" ",", por lo cual esto evitará la inyección de código malicioso. 
+Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo presentado anteriormente vamos a hacer uso del tag "c:out" en la línea 7, esta etiqueta nos ayudará a controlar los datos proporcionados por los usuarios ya que escapará y codificará de manera automática los caracteres HTML dentro del marcado mostrado al usuario, incluidos los caracteres "<" ">" ",", por lo cual esto evitará la inyección de código malicioso. 
 
 ## ¿Que elementos puedo utilizar para reforzar la seguridad ante esta vulnerabilidad o en el momento en que este desarrollando una nueva aplicación?
 
 1. Uso del atributo HTTPOnly en las cookies.
-   Este indicador evita que código JS acceda al contenido de la cookie, lo cual evita que las cookies sean obtenidas a través de la explotación de esta vulnerabilidad.</br>
+   Este indicador evita que código JS acceda al contenido de la cookie, lo cual evita que las cookies sean obtenidas a través de la explotación de esta vulnerabilidad.
 2. Uso del encabezado de respuesta http Content-Security-Policy. 
-   Este funciona baja el principio de white list, este encabezado restringe las fuentes desde las cuales se pueden cargar scripts y datos en todo sitio web, si un código malicioso se introduce en el código HTML sin ser reconocido dentro de la whitelist y este intenta cargar datos externos, el navegador del usuario lo rechazará.</br>
+   Este funciona baja el principio de white list, este encabezado restringe las fuentes desde las cuales se pueden cargar scripts y datos en todo sitio web, si un código malicioso se introduce en el código HTML sin ser reconocido dentro de la whitelist y este intenta cargar datos externos, el navegador del usuario lo rechazará.
 3. Uso del encabezado HTTP X-XSS-Protection.
-   Este encabezado evita que los navegadores carguen una página si detectan la explotación de Reflected XSS.</br>
+   Este encabezado evita que los navegadores carguen una página si detectan la explotación de Reflected XSS.
 4. Uso de encabezados de respuesta apropiados. 
    Establecer la cabecera X-Content-Type-Options nos apoyará en asegurar que los navegadores  no carguen hojas de estilo, JavaScript o un Myme-type no definido o inadecuado. Esto reduce el riesgo de un ataque de Xss o de confusión de Myme-type.
 
@@ -106,12 +104,10 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 
 <div>
 
-<img src="./Recursos/Imagenes/bluewritte.png" align="right" alt="logoOadis" style="zoom:20%;" />
+<img src="./Recursos/Imagenes/bluewritte.png" align="right" alt="logoOadis" style="zoom:40%;" />
 <p>
 - Desarrollo de aplicación dummie vulnerable a xss reflected.
-</br>
 - Walkthrough para explotación de vulnerabilidad.
-</br>
 - Intrusion test para validar que la solución de remediación propuesta es adecuada.
 </p>
 <h4>Referencias</h4>
