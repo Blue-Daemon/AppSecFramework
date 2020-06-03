@@ -7,6 +7,8 @@
 <div style="text-align: justify"> 
 En una entrada anterior hablamos sobre la vulnerabilidad Xss Reflected, la cual representa una de las variantes de XSS, preguntarán ¿porque retomo este tema? si estamos hablando de Xss Stored, bueno, pues la razón es porque durante la definición de Xss reflected inicialmente conceptualizamos de forma general que es Xss, y en dicho articulo mencionamos lo siguiente:</div>
 
+<br>
+
 >Xss es una vulnerabilidad presente comúnmente en aplicaciones web la cual permitirá inyectar al (OUTPUT) ó a la salida de datos de la aplicación sentencias maliciosas que se reflejan o se ejecutan en el navegador de la víctima, las cuales aprovechando la confianza de la sesión que se ejecuta en el momento permitirá realizar acciones que pueden comprometer al usuario afectado.
 
 <br>
