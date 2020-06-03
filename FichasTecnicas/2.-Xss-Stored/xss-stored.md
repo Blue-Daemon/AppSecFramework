@@ -99,6 +99,7 @@ Pero como simpre decimos, una imagen vale más que mil palabras.</div>
 </table>
 
 <br>
+
 ## Conceptualización de la remediación de la vulnerabilidad en código.
 
 <br>
