@@ -117,7 +117,7 @@ Pero como simpre decimos, una imagen vale más que mil palabras.</div>
 10 </table>
 ```
 <div style="text-align: justify"> 
-Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo presentado anteriormente vamos a hacer uso del tag <c:out> en la línea 7, esta etiqueta nos ayudará a controlar los datos proporcionados por los usuarios ya que escapará y codificará de manera automática los caracteres HTML dentro del marcado mostrado al usuario, incluidos los caracteres "<" ">" ",", por lo cual esto evitará la inyección de código malicioso. 
+Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo presentado anteriormente vamos a hacer uso del tag "c:out" en las líneas 5,6,7, esta etiqueta nos ayudará a controlar los datos proporcionados por los usuarios ya que escapará y codificará de manera automática los caracteres HTML dentro del marcado mostrado al usuario, incluidos los caracteres "<" ">" ",", por lo cual esto evitará la inyección de código malicioso. 
 </div>
 
 ## ¿Que elementos puedo utilizar para reforzar la seguridad ante esta vulnerabilidad o en el momento en que este desarrollando una nueva aplicación?
@@ -150,7 +150,7 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 ### Proximas actividades por incluír dentro de este artículo.
 
 <div>
-<img src="/home/deiivid/Descargas/bluewritte.png" align="right" alt="Blue-Daemon" style="zoom:40%;" />
+<img src="../../Recursos/Imagenes/bluewritte.png" align="right" alt="Blue-Daemon" style="zoom:40%;" />
 <p>
 - Desarrollo de aplicación dummie vulnerable a xss reflected.
 <br>
@@ -165,7 +165,7 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 https://cwe.mitre.org/data/definitions/79.html<br>
 https://capec.mitre.org/data/definitions/592.html<br>
 https://owasp.org/www-community/attacks/xss/<br>
-https://cheatsheetseries.owasp.org/cheatsheets Cross_Site_Scripting_Prevention_Cheat_Sheet.html<br>
+https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html<br>
 </p>
 </div>
 
