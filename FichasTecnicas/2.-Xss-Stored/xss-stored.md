@@ -1,4 +1,4 @@
-<img src="/home/deiivid/Imágenes/logoOadis.png" align="center" alt="logoOadis" style="zoom:100%;" />
+<img src="../../Recursos/Imagenes/logoOadis.png" align="center" alt="logoOadis" style="zoom:100%;" />
 
 # Xss Stored                
 
@@ -102,6 +102,7 @@ Pero como simpre decimos, una imagen vale más que mil palabras.</div>
 ## Conceptualización de la remediación de la vulnerabilidad en código.
 
 <br>
+
 ```java
 1 // Pseudocde for show all comments in QuinielApp
 2 <table>
