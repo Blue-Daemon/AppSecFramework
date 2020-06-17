@@ -156,7 +156,7 @@ Para realizar la remediación adecuada a esta vulnerabilidad dentro del ejemplo 
 <div>
 <img src="../../Recursos/Imagenes/bluewritte.png" align="right" alt="Blue-Daemon" style="zoom:40%;" />
 <p>
-- Desarrollo de aplicación dummie vulnerable a xss reflected.
+- Desarrollo de aplicación dummie vulnerable a xss stored.
 <br>
 - Riesgos y vulnerabilidades que pueden derivar de la explotación de esta vulnerabilidad.
 <br>
