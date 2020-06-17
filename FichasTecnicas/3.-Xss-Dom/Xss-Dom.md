@@ -1,5 +1,5 @@
 
-<img src="/home/deiivid/Imágenes/logoOadis.png" align="center" alt="logoOadis" style="zoom:100%;" />
+<img src="../../Recursos/Imagenes/logoOadis.png" align="center" alt="logoOadis" style="zoom:100%;" />
 
 # Xss Dom
 
